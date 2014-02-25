@@ -1,5 +1,5 @@
 #include "spellCard.h"
 
-SpellCard::SpellCard() : Card(SPELL_TYPE) {
+SpellCard::SpellCard(cardColor color) : Card(SPELL_TYPE, color) {
 
 }

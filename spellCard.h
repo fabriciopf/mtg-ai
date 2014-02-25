@@ -2,5 +2,5 @@
 
 class SpellCard : public Card {
 public:
-	SpellCard();	
+	SpellCard(cardColor color);	
 };

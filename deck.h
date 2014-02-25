@@ -2,11 +2,13 @@
 #include "card.h"
 
 class Deck {
-public:	
+public:
 	void shuffle();
 	void addCard(Card card, int count = 1);
-	void removeCard(Card card, int count = 1);
+	void removeCard(const Card& card);
 	int hasCard(Card card);
 	int size();
-	bool validate();
+	bool isValid();
+private:
+	std::list<Card> _cards;
 };

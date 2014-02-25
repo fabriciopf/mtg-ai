@@ -2,6 +2,6 @@
 
 class TerrainCard : public Card {
 public:
-	TerrainCard();
-
+	TerrainCard(cardColor color);
+	TerrainCard(std::list<cardColor> colors);
 };

@@ -8,7 +8,7 @@ eMatchResult Match::start() {
 	setResult(NOT_FINISHED);
 
 	// Validate decks
-	if (!player1->deck()->isValid() || !player2->deck()->isValid()) {
+	if (!_player1->deck()->isValid() || !_player2->deck()->isValid()) {
 		setResult(INVALID_DECK);
 	} else {
 		// Run simulation
@@ -23,13 +23,13 @@ void Match::setResult(eMatchResult result) {
 }
 
 Player* Match::player1() {
-	return player1;
+	return _player1;
 }
 
-Player* Match::player2) {
-	return player2;
+Player* Match::player2() {
+	return _player2;
 }
 
-int Match::result() {
+eMatchResult Match::result() {
 	return _result;
 }

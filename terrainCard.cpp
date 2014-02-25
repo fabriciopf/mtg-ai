@@ -1,5 +1,9 @@
 #include "terrainCard.h"
 
-TerrainCard::TerrainCard() : Card(TERRAIN_TYPE) {
+TerrainCard::TerrainCard(cardColor color) : Card(TERRAIN_TYPE, color) {
+
+}
+
+TerrainCard::TerrainCard(std::list<cardColor> colors) : Card(TERRAIN_TYPE, colors) {
 
 }

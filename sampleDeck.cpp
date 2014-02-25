@@ -1,5 +1,9 @@
 #include "sampleDeck.h"
+#include "terrainCard.h"
+#include "spellCard.h"
 
 SampleDeck::SampleDeck() {
-	// TODO: addCard();
+	Card* card = new TerrainCard(RED);
+	addCard(*card);
+	delete card;
 }
