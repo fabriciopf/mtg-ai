@@ -4,4 +4,4 @@ INC=-I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Deve
 default:	mtg-ai
 
 mtg-ai:	main.cpp
-		gcc -Wall $(LIB) $(INC) -c main.cpp deck.cpp match.cpp card.cpp player.cpp sampleDeck.cpp spellCard.cpp terrainCard.cpp
+		gcc -Wall $(LIB) $(INC) -c main.cpp deck.cpp match.cpp card.cpp player.cpp sampleDeck.cpp spell.cpp land.cpp

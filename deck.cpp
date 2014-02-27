@@ -3,7 +3,7 @@
 void Deck::shuffle() {
 }
 
-void Deck::addCard(Card card, int count) {
+void Deck::addCard(Card* card, int count) {
 	_cards.insert(_cards.end(), count, card);
 }
 
@@ -11,7 +11,7 @@ void Deck::removeCard(const Card& card) {
 	//TODO: _cards.remove(card);
 }
 
-int Deck::hasCard(Card card) {
+int Deck::hasCard(Card* card) {
 	//TODO: iterate all elements
 	return 0;
 }

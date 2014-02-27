@@ -1,22 +1,30 @@
 #include "card.h"
 
-Card::Card(cardType type, cardColor color) : _type(type) {
+Card::Card(colorType color, std::string name) {
 	_colors.push_back(color);
 }
 
-Card::Card(cardType type, std::list<cardColor> colors) : _type(type) {
+Card::Card(std::list<colorType> colors, std::string name) {
 	_colors.insert(_colors.end(), colors.begin(), colors.end());
 }
 
-cardType Card::type() {
-	return _type;
-}
-
-std::list<cardColor> Card::colors() {
+std::list<colorType> Card::colors() {
 	return _colors;
 }
 
-bool Card::hasColor(cardColor color) {
+bool Card::hasColor(colorType color) {
 	//TODO: iterate all elements
 	return false;
+}
+
+bool Card::isColorless() {
+	return !_colors.size();
+}
+
+bool Card::isMulticolored() {
+	return _colors.size() > 1;
+}
+
+std::string Card::name() {
+	return _name;
 }
