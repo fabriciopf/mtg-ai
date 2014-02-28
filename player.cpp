@@ -8,6 +8,15 @@ Deck* Player::deck() {
 	return _deck;
 }
 
-Deck* Player::cemetery() {
-	return _cemetery;
+Deck* Player::graveyard() {
+	return _graveyard;
+}
+
+int Player::life() {
+	return _life;
+}
+
+void Player::setLibrary(Deck* deck) {
+	_library->clear();
+	_library->swap(deck);
 }

@@ -4,7 +4,7 @@ Match::Match(Player* p1, Player* p2) : _player1(p1), _player2(p2), _result(NOT_S
 
 }
 
-eMatchResult Match::start() {
+matchResult Match::start() {
 	setResult(NOT_FINISHED);
 
 	// Validate decks
@@ -18,7 +18,7 @@ eMatchResult Match::start() {
 	return result();
 }
 
-void Match::setResult(eMatchResult result) {
+void Match::setResult(matchResult result) {
 	_result = result;
 }
 
@@ -30,6 +30,6 @@ Player* Match::player2() {
 	return _player2;
 }
 
-eMatchResult Match::result() {
+matchResult Match::result() {
 	return _result;
 }

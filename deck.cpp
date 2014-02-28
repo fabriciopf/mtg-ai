@@ -1,6 +1,8 @@
 #include "deck.h"
+#include <algorithm>
 
 void Deck::shuffle() {
+	std::random_shuffle(_cards.begin(), _cards.end());
 }
 
 void Deck::addCard(Card* card, int count) {
@@ -23,4 +25,8 @@ int Deck::size() {
 bool Deck::isValid() {
 	//TODO: verify minimum size, same card count and everything 
 	return false;
+}
+
+void Deck::swap(Deck* deck) {
+	_cards->swap(deck->cards());
 }

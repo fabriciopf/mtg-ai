@@ -1,13 +1,9 @@
 #include "land.h"
 
-Land::Land(colorType color, std::string name) : Card(color, name) {
+Land::Land(colorType colors, std::string name) : Card(colors, name) {
 
 }
 
-Land::Land(std::list<colorType> colors, std::string name) : Card(colors, name) {
-
-}
-
-cardType Land::type() {
-	return LAND;
+cardType Land::types() {
+	return (cardType) (LAND | ARTIFACT);
 }

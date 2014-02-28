@@ -1,5 +1,6 @@
 #pragma once
 #include "card.h"
+#include <list>
 
 class Deck {
 public:
@@ -9,6 +10,7 @@ public:
 	int hasCard(Card* card);
 	int size();
 	bool isValid();
+	void swap(*Deck deck);
 private:
 	std::list<Card*> _cards;
 };
